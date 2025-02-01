@@ -6,15 +6,18 @@ export const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="text-xl font-semibold">
-            delgrange
+            Portfolio
           </Link>
           <nav className="flex space-x-8">
             <Link to="/" className="text-sm font-medium hover:text-primary">
               Home
             </Link>
-            <Link to="/gigs" className="text-sm font-medium hover:text-primary">
-              Gigs
-            </Link>
+            <a href="#about" className="text-sm font-medium hover:text-primary">
+              About
+            </a>
+            <a href="#projects" className="text-sm font-medium hover:text-primary">
+              Projects
+            </a>
             <a href="#contact" className="text-sm font-medium hover:text-primary">
               Contact
             </a>
