@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Github, Linkedin, Mail, GraduationCap } from "lucide-react";
 
 const Index = () => {
   return (
@@ -36,6 +37,30 @@ const Index = () => {
                   alt="Developer"
                   className="rounded-lg shadow-lg"
                 />
+                <div className="flex justify-center mt-6 space-x-4">
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-primary transition-colors"
+                  >
+                    <Github size={24} />
+                  </a>
+                  <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-primary transition-colors"
+                  >
+                    <Linkedin size={24} />
+                  </a>
+                  <a
+                    href="mailto:contact@example.com"
+                    className="text-gray-600 hover:text-primary transition-colors"
+                  >
+                    <Mail size={24} />
+                  </a>
+                </div>
               </div>
               <div>
                 <h2 className="text-3xl font-bold mb-6">About Me</h2>
@@ -49,6 +74,35 @@ const Index = () => {
                   <li>✓ Database Design</li>
                   <li>✓ API Development</li>
                 </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Education Section */}
+        <section className="py-24 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-12">Education</h2>
+            <div className="space-y-8 max-w-3xl mx-auto">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center gap-4 mb-4">
+                  <GraduationCap className="text-primary" size={24} />
+                  <h3 className="text-xl font-semibold">Master of Computer Science</h3>
+                </div>
+                <p className="text-gray-600">University Name • 2020-2022</p>
+                <p className="text-gray-600 mt-2">
+                  Specialized in Software Engineering and Artificial Intelligence
+                </p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center gap-4 mb-4">
+                  <GraduationCap className="text-primary" size={24} />
+                  <h3 className="text-xl font-semibold">Bachelor of Computer Science</h3>
+                </div>
+                <p className="text-gray-600">University Name • 2016-2020</p>
+                <p className="text-gray-600 mt-2">
+                  Focus on Computer Science fundamentals and Software Development
+                </p>
               </div>
             </div>
           </div>
