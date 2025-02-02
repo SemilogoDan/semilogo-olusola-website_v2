@@ -21,6 +21,14 @@ export const Header = () => {
             <a href="#contact" className="text-sm font-medium hover:text-primary">
               Contact
             </a>
+            <a 
+              href="/resume.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-sm font-medium hover:text-primary"
+            >
+              CV
+            </a>
           </nav>
         </div>
       </div>
