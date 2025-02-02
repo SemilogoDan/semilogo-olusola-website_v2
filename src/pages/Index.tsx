@@ -1,12 +1,47 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Github, Linkedin, Mail, GraduationCap, Award } from "lucide-react";
+import { Github, Linkedin, Mail, GraduationCap, Award, Medal } from "lucide-react";
+import { useTheme } from "next-themes";
+import { Button } from "@/components/ui/button";
+import { Moon, Sun } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Index = () => {
+  const { setTheme } = useTheme();
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow pt-16">
+        {/* Theme Switcher */}
+        <div className="fixed bottom-4 right-4">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="icon">
+                <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                <span className="sr-only">Toggle theme</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem onClick={() => setTheme("light")}>
+                Light
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setTheme("dark")}>
+                Dark
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setTheme("system")}>
+                System
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
+
         {/* Hero Section */}
         <section className="bg-gradient-to-b from-blue-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
@@ -108,35 +143,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Honors & Awards Section */}
-        <section className="py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center mb-12">Honors & Awards</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="flex items-center gap-4 mb-4">
-                  <Award className="text-primary" size={24} />
-                  <h3 className="text-xl font-semibold">Best Graduate Project</h3>
-                </div>
-                <p className="text-gray-600">University Name • 2022</p>
-                <p className="text-gray-600 mt-2">
-                  Awarded for exceptional research and implementation of AI-driven solutions
-                </p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="flex items-center gap-4 mb-4">
-                  <Award className="text-primary" size={24} />
-                  <h3 className="text-xl font-semibold">Dean's List</h3>
-                </div>
-                <p className="text-gray-600">University Name • 2019-2022</p>
-                <p className="text-gray-600 mt-2">
-                  Consistently maintained high academic performance throughout the program
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Projects Section */}
         <section id="projects" className="py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -171,6 +177,64 @@ const Index = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Certifications Section */}
+        <section className="py-24 bg-white dark:bg-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-12">Certifications</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                <div className="flex items-center gap-4 mb-4">
+                  <Medal className="text-primary" size={24} />
+                  <h3 className="text-xl font-semibold">AWS Certified Solutions Architect</h3>
+                </div>
+                <p className="text-gray-600 dark:text-gray-400">Amazon Web Services • 2023</p>
+                <p className="text-gray-600 dark:text-gray-400 mt-2">
+                  Professional certification for designing distributed systems on AWS
+                </p>
+              </div>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                <div className="flex items-center gap-4 mb-4">
+                  <Medal className="text-primary" size={24} />
+                  <h3 className="text-xl font-semibold">Google Cloud Professional</h3>
+                </div>
+                <p className="text-gray-600 dark:text-gray-400">Google • 2023</p>
+                <p className="text-gray-600 dark:text-gray-400 mt-2">
+                  Advanced certification for Google Cloud Platform architecture
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Honors & Awards Section */}
+        <section className="py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-12">Honors & Awards</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center gap-4 mb-4">
+                  <Award className="text-primary" size={24} />
+                  <h3 className="text-xl font-semibold">Best Graduate Project</h3>
+                </div>
+                <p className="text-gray-600">University Name • 2022</p>
+                <p className="text-gray-600 mt-2">
+                  Awarded for exceptional research and implementation of AI-driven solutions
+                </p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center gap-4 mb-4">
+                  <Award className="text-primary" size={24} />
+                  <h3 className="text-xl font-semibold">Dean's List</h3>
+                </div>
+                <p className="text-gray-600">University Name • 2019-2022</p>
+                <p className="text-gray-600 mt-2">
+                  Consistently maintained high academic performance throughout the program
+                </p>
+              </div>
             </div>
           </div>
         </section>
