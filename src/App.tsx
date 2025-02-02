@@ -1,31 +1,22 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import Gig from "./pages/Gig";
 import NotFound from "./pages/NotFound";
+import Gig from "./pages/Gig";
+import "./App.css";
 
-const queryClient = new QueryClient();
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <ThemeProvider defaultTheme="system" enableSystem disableTransitionOnChange>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/gig/:id" element={<Gig />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
+function App() {
+  return (
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/gig" element={<Gig />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Router>
     </ThemeProvider>
-  </QueryClientProvider>
-);
+  );
+}
 
 export default App;
