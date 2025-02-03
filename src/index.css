@@ -60,36 +60,41 @@
 
 /* Custom dark mode styles */
 .dark .about-section {
-  @apply text-white;
+  @apply text-white transition-all duration-300;
 }
 
 .dark .social-icons a {
-  @apply text-white;
+  @apply text-white transition-all duration-300;
 }
 
 .dark .education-section {
-  @apply text-black bg-white rounded-lg;
+  @apply text-black bg-white rounded-lg transition-all duration-300;
 }
 
 .dark .project-section h3,
 .dark .project-section .project-title {
-  @apply text-black bg-white rounded-lg px-2;
+  @apply text-black bg-white rounded-lg px-2 transition-all duration-300;
 }
 
 .dark .certification-section {
-  @apply text-white;
+  @apply text-white transition-all duration-300;
 }
 
 .dark .contact-section {
-  @apply text-white;
+  @apply text-white bg-background transition-all duration-300;
 }
 
-.dark .contact-section p {
-  @apply text-black;
+.dark .contact-section form {
+  @apply bg-white/5 backdrop-blur-sm rounded-lg p-6 transition-all duration-300;
+}
+
+.dark .contact-section input,
+.dark .contact-section textarea {
+  @apply bg-white/10 border-white/20 text-white transition-all duration-300;
 }
 
 .dark .footer-section {
-  @apply text-black bg-white;
+  @apply text-black bg-white transition-all duration-300;
 }
 
 /* Light mode transitions */
@@ -100,6 +105,9 @@
 .project-section .project-title,
 .certification-section,
 .contact-section,
+.contact-section form,
+.contact-section input,
+.contact-section textarea,
 .footer-section {
   @apply transition-all duration-300;
 }
