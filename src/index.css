@@ -84,6 +84,10 @@
   @apply text-white;
 }
 
+.dark .contact-section p {
+  @apply text-black;
+}
+
 .dark .footer-section {
   @apply text-black bg-white;
 }

@@ -222,7 +222,7 @@ const Index = () => {
           </div>
         </section>
       </main>
-      <Footer className="footer-section" />
+      <Footer />
     </div>
   );
 };
