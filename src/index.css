@@ -57,3 +57,45 @@
     @apply bg-background text-foreground transition-all duration-300;
   }
 }
+
+/* Custom dark mode styles */
+.dark .about-section {
+  @apply text-white;
+}
+
+.dark .social-icons a {
+  @apply text-white;
+}
+
+.dark .education-section {
+  @apply text-black bg-white rounded-lg;
+}
+
+.dark .project-section h3,
+.dark .project-section .project-title {
+  @apply text-black bg-white rounded-lg px-2;
+}
+
+.dark .certification-section {
+  @apply text-white;
+}
+
+.dark .contact-section {
+  @apply text-white;
+}
+
+.dark .footer-section {
+  @apply text-black bg-white;
+}
+
+/* Light mode transitions */
+.about-section,
+.social-icons a,
+.education-section,
+.project-section h3,
+.project-section .project-title,
+.certification-section,
+.contact-section,
+.footer-section {
+  @apply transition-all duration-300;
+}

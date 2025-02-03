@@ -28,7 +28,7 @@ const Index = () => {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-24">
+        <section id="about" className="about-section py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
@@ -37,7 +37,7 @@ const Index = () => {
                   alt="Developer"
                   className="rounded-lg shadow-lg"
                 />
-                <div className="flex justify-center mt-6 space-x-4">
+                <div className="flex justify-center mt-6 space-x-4 social-icons">
                   <a
                     href="https://github.com"
                     target="_blank"
@@ -80,7 +80,7 @@ const Index = () => {
         </section>
 
         {/* Education Section */}
-        <section className="py-24 bg-gray-50">
+        <section className="education-section py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center mb-12">Education</h2>
             <div className="space-y-8 max-w-3xl mx-auto">
@@ -109,7 +109,7 @@ const Index = () => {
         </section>
 
         {/* Projects Section */}
-        <section id="projects" className="py-24 bg-gray-50">
+        <section id="projects" className="project-section py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center mb-12">Featured Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -137,7 +137,7 @@ const Index = () => {
                     className="w-full h-48 object-cover"
                   />
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                    <h3 className="text-xl font-semibold mb-2 project-title">{project.title}</h3>
                     <p className="text-gray-600">{project.description}</p>
                   </div>
                 </div>
@@ -147,7 +147,7 @@ const Index = () => {
         </section>
 
         {/* Certifications Section */}
-        <section className="py-24 bg-white dark:bg-gray-900">
+        <section className="certification-section py-24 bg-white dark:bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center mb-12">Certifications</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -205,7 +205,7 @@ const Index = () => {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-24">
+        <section id="contact" className="contact-section py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
@@ -222,7 +222,7 @@ const Index = () => {
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer className="footer-section" />
     </div>
   );
 };
