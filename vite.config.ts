@@ -9,6 +9,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  base: "./", // This ensures assets are loaded correctly on GitHub Pages
   plugins: [
     react(),
     mode === 'development' &&
@@ -18,5 +19,10 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  build: {
+    outDir: "dist", // Output directory for the build
+    assetsDir: "assets", // Directory for assets
+    sourcemap: true, // Enable source maps for debugging
   },
 }));
