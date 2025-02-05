@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -7,9 +8,30 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">Portfolio</h3>
-            <p className="text-sm text-gray-600">
-              Building amazing web experiences with modern technologies.
-            </p>
+            <div className="flex space-x-4">
+              <a
+                href="https://github.com/yourusername"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-primary transition-colors"
+              >
+                <Github size={24} />
+              </a>
+              <a
+                href="https://linkedin.com/in/yourusername"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-primary transition-colors"
+              >
+                <Linkedin size={24} />
+              </a>
+              <a
+                href="mailto:your.email@example.com"
+                className="text-gray-600 hover:text-primary transition-colors"
+              >
+                <Mail size={24} />
+              </a>
+            </div>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
@@ -32,11 +54,9 @@ export const Footer = () => {
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <h3 className="text-lg font-semibold mb-4">Connect</h3>
             <p className="text-sm text-gray-600">
-              Email: contact@example.com
-              <br />
-              Location: Remote
+              Feel free to reach out through any of my social media channels or send me an email directly.
             </p>
           </div>
         </div>
