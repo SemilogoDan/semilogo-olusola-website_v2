@@ -10,7 +10,7 @@ export const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Portfolio</h3>
             <div className="flex space-x-4">
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/SemilogoDan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-primary transition-colors"
@@ -18,7 +18,7 @@ export const Footer = () => {
                 <Github size={24} />
               </a>
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://www.linkedin.com/in/semilogo-dan-s-ba86b2206/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-primary transition-colors"
@@ -26,7 +26,7 @@ export const Footer = () => {
                 <Linkedin size={24} />
               </a>
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:semilogoolusola@gmail.com"
                 className="text-gray-600 hover:text-primary transition-colors"
               >
                 <Mail size={24} />
