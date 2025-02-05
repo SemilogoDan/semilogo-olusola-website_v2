@@ -86,7 +86,7 @@ const Index = () => {
             <div className="space-y-8 max-w-3xl mx-auto">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="flex items-center gap-4 mb-4">
-                  <GraduationCap className="text-primary" size={24} />
+                  <GraduationCap className="text-gray-900" size={24} />
                   <h3 className="text-xl font-semibold">Master of Computer Science</h3>
                 </div>
                 <p className="text-gray-600">University Name • 2020-2022</p>
@@ -96,7 +96,7 @@ const Index = () => {
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="flex items-center gap-4 mb-4">
-                  <GraduationCap className="text-primary" size={24} />
+                  <GraduationCap className="text-gray-900" size={24} />
                   <h3 className="text-xl font-semibold">Bachelor of Computer Science</h3>
                 </div>
                 <p className="text-gray-600">University Name • 2016-2020</p>
@@ -271,4 +271,3 @@ const Index = () => {
 };
 
 export default Index;
-
