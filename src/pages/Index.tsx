@@ -176,33 +176,35 @@ const Index = () => {
         </section>
 
         {/* Honors & Awards Section */}
-        <section className="py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center mb-12">Honors & Awards</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="flex items-center gap-4 mb-4">
-                  <Award className="text-primary" size={24} />
-                  <h3 className="text-xl font-semibold">Best Graduate Project</h3>
-                </div>
+
+{/* Honors & Awards Section */}
+<section className="honors-section py-24">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl font-bold text-center mb-12">Honors & Awards</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <div className="flex items-center gap-4 mb-4">
+          <Award className="text-primary" size={24} />
+          <h3 className="text-xl font-semibold award-title">Best Graduate Project</h3>
+        </div>
                 <p className="text-gray-600">University Name • 2022</p>
                 <p className="text-gray-600 mt-2">
                   Awarded for exceptional research and implementation of AI-driven solutions
                 </p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="flex items-center gap-4 mb-4">
-                  <Award className="text-primary" size={24} />
-                  <h3 className="text-xl font-semibold">Dean's List</h3>
-                </div>
+      </div>
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <div className="flex items-center gap-4 mb-4">
+          <Award className="text-primary" size={24} />
+          <h3 className="text-xl font-semibold award-title">Dean's List</h3>
+        </div>
                 <p className="text-gray-600">University Name • 2019-2022</p>
                 <p className="text-gray-600 mt-2">
                   Consistently maintained high academic performance throughout the program
                 </p>
-              </div>
-            </div>
-          </div>
-        </section>
+      </div>
+    </div>
+  </div>
+</section>
 
         {/* Contact Section */}
         <section id="contact" className="contact-section py-24">
@@ -269,3 +271,4 @@ const Index = () => {
 };
 
 export default Index;
+

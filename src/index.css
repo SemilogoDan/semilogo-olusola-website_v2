@@ -101,6 +101,16 @@
   @apply text-black bg-white transition-all duration-300;
 }
 
+.dark .honors-section h3,
+.dark .honors-section .award-title {
+  @apply text-black bg-white rounded-lg px-2 transition-all duration-300;
+}
+
+.dark .footer-section h3,
+.dark .footer-section .text-lg {
+  @apply text-black transition-all duration-300;
+}
+
 /* Light mode transitions */
 .about-section,
 .social-icons a,
@@ -113,6 +123,8 @@
 .contact-section input,
 .contact-section textarea,
 .contact-section button[type="submit"],
-.footer-section {
+.footer-section,
+.honors-section h3,
+.honors-section .award-title {
   @apply transition-all duration-300;
 }
