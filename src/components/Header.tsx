@@ -34,7 +34,7 @@ export const Header = () => {
                 Contact
               </a>
               <a 
-                href="/resume.pdf" 
+                href="Semilogo OGUNGBURE_Electrical.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-sm font-medium hover:text-primary"
